@@ -175,6 +175,9 @@ export class ViewLine implements IVisibleLine {
 		sb.appendString(String(deltaTop));
 		sb.appendString('px;height:');
 		sb.appendString(String(lineHeight));
+		if (lineData.containsRTL) {
+			sb.appendString('px; direction:rtl; right:40')
+		}
 		sb.appendString('px;" class="');
 		sb.appendString(ViewLine.CLASS_NAME);
 		sb.appendString('">');
